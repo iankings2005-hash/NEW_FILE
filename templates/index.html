@@ -1,13 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ title }}</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>{{ title }}</h1>
+{% block content %}
 
-    <p>Welcome, {{ username }}!</p>
+<h1>Expense Summary</h1>
 
-</body>
-</html>
+<table border="1">
+
+    <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Action</th>
+    </tr>
+
+    {% for category, amount in category_totals %}
+
+    <tr>
+
+        <td>{{ category }}</td>
+
+        <td>${{ "%.2f"|format(amount) }}</td>
+
+        <td>
+            <a class="open-btn"
+               href="{{ url_for('category_expenses', category=category) }}">
+                Open
+            </a>
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+    <tr>
+
+        <th>Total</th>
+
+        <th>${{ "%.2f"|format(grand_total) }}</th>
+
+        <th></th>
+
+    </tr>
+
+</table>
+
+<br>
+
+{% endblock %}

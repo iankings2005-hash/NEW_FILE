@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ category }}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ category }} Expenses</h1>
+
+<a class="back-btn" href="{{ url_for('home') }}">
+    ← Back to Summary
+</a>
+
+<br><br>
+
+<table border="1">
+
+    <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for expense in expenses %}
+
+    <tr>
+
+        <td>{{ expense.name }}</td>
+
+        <td>${{ "%.2f"|format(expense.amount) }}</td>
+
+        <td>
+
+            <a class="edit-btn"
+                href="{{ url_for('edit_expense', id=expense.id) }}">
+                 Edit
+            </a>
+
+           <form class="delete-form"
+                 action="{{ url_for('delete_expense', id=expense.id) }}"
+                 method="POST">
+                 
+                <button type="submit">
+                    Delete
+                </button>
+
+            </form>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+    <tr>
+
+        <th>Total</th>
+
+        <th>${{ "%.2f"|format(total) }}</th>
+
+        <th></th>
+
+    </tr>
+
+</table>
+
+<br><br>
+
+<a class="add-category-btn"
+   href="{{ url_for('add_expense', category=category) }}">
+    + Add {{ category }} Expense
+</a>
+
+{% endblock %}

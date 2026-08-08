@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navbar {
+    background: #1f2937;
+    padding: 16px 0;
+}
+
+.navbar-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-add {
+    background: white;
+    color: #1f2937;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-add:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1 {
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    background: white;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #f9fafb;
+    font-weight: bold;
+}
+
+tr:last-child td,
+tr:last-child th {
+    border-bottom: none;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button,
+.edit-btn,
+.open-btn {
+    border: none;
+
+    padding: 8px 13px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.edit-btn {
+display: inline-block;
+background: #e5e7eb;
+color: #111827;
+font-weight: bold;
+margin-right: 6px;
+}
+
+.open-btn {
+    background: #1f2937;
+    color: white;
+}
+
+button {
+    background: #dc2626;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #d1d5db;
+}
+
+.open-btn:hover {
+    background: #374151;
+}
+
+button:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================
+   FORMS
+   ========================= */
+
+form {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+
+    border-color: #1f2937;
+}
+.delete-form {
+    display: inline;
+    background: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+.back-btn {
+    display: inline-block;
+    background: #e5e7eb;
+    color: #111827;
+    padding: 9px 14px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.add-category-btn {
+    display: inline-block;
+    background: #1f2937;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-category-btn:hover {
+    background: #374151;
+}
